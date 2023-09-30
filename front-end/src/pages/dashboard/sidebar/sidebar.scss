@@ -1,0 +1,205 @@
+.sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    background-color: rgba(22, 22, 22, 1);
+    color: #fff;
+    min-height: 100%;
+    // overflow: auto;
+    padding: 1.5rem 0;
+    transition: width .2s ease;
+
+    hr.sidebar-divider {
+        margin: .2rem 0;
+        border-top: 1.5px solid rgba(255, 255, 255, 0.493);
+    }
+
+    .header-sidebar {
+        position: relative;
+        padding: 1rem 0 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #eeeeee50;
+
+        .sidebar-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logo {
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+            }
+
+            .title {
+                margin: 0;
+                font-size: 31.42px;
+                font-weight: 700;
+                padding: 0 0 0 1rem;
+                background: #000;
+            }
+        }
+
+        .toggle-sidebar-btn {
+            position: absolute;
+            background: transparent;
+            right: -35px;
+        }
+    }
+
+    .main-sidebar {
+        margin: 1rem 0;
+        padding: 0 .5rem;
+
+        .link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: .5rem .5rem;
+            border-radius: 5px;
+            margin-bottom: 2px;
+
+            &:hover {
+                background: #ffffff4b;
+            }
+
+            &.active {
+                font-weight: 700;
+            }
+        }
+
+        .sidebar-item {
+
+            .icon {
+                font-size: 1.3rem;
+                margin-right: .2rem;
+            }
+
+            .sidebar-title {
+                padding: .6rem .5rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 5px;
+
+                &:hover {
+                    background: #ffffff4b; 
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    line-height: 1.3rem;
+                }
+            }
+
+            .sidebar-content {
+                background: #fff;
+                color: #000;
+                border-radius: 5px;
+                height: 0;
+                overflow: hidden;
+                transition: height .4s ease;
+
+                & .link {
+                    padding: .5rem;
+                    
+                    &:hover {
+                        background: #eee;
+                    }
+                }
+            }
+
+            &.plain {
+                display: flex;
+                align-items: center;
+            }
+
+            &.open {
+                .sidebar-title .icon-dropdown {
+                    transform: rotate(180deg);
+                    transition: all .2s ease;
+                }
+
+                .sidebar-content {
+                    margin: .3rem .5rem;
+                    height: auto;
+                }
+
+            }
+
+        }
+    }
+
+    // inactive
+
+    &.inactive {
+        width: 100px;
+
+        .header-sidebar {
+            .sidebar-logo {
+                .title {
+                    opacity: 0;
+                    display: none;
+                }
+            }
+
+            .toggle-sidebar-btn {
+                transform: rotate(180deg);
+            }
+        }
+
+        .main-sidebar {
+            padding: .3rem;
+
+            .link {
+                padding: .5rem 0;
+                font-size: .8rem;
+                display: block;
+                text-align: center;
+            }
+
+            .sidebar-item {
+                position: relative;
+                .icon {
+                    margin: 0 auto;
+                    display: block;
+                    text-align: center;
+                }
+
+                .sidebar-title {
+                    padding: .5rem 0;
+                    justify-content: center;
+
+                    span {
+                        flex-direction: column;
+                        justify-content: center;
+                        font-size: .8rem;
+                    }
+
+                    .icon-dropdown {
+                        display: none;
+                    }
+                }
+
+                .sidebar-content {
+                    position: absolute;
+                    z-index: 999;
+                    top: 0;
+                    left: 100px;
+                    width: 180px;
+                    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+                    
+                    & .link {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+    }
+}

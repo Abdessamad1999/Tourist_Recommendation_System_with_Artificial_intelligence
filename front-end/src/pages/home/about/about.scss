@@ -1,0 +1,137 @@
+.about{
+    padding: 4rem 0 2rem;
+
+    .secContainer{
+        .title{
+            color:var(--blackColor);
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.5rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .mainContent{
+            gap: 1.5rem;
+
+            .singleItem{
+                text-align: center;
+
+                img{
+                    background: rgba(247,144,54,.265);
+                    width: 100px;
+                    border-radius: 50%;
+                    padding: 1rem;
+                }
+
+                h3{
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                    color: var(--blackColor);
+                    padding: .5rem;
+                }
+
+                p{
+                    font-size: 13px;
+                    font-weight: 500;
+                    padding-bottom: .5rem;
+                    color: var(--textColor);
+                }
+            }
+        }
+
+        .videoCard{
+            margin-top: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,.73),rgba(0,0,0,.609)), url('../../../images/img2.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .cardContent{
+                gap: 2rem;
+                padding: 2rem 1rem;
+
+                .cardText{
+                    h2{
+                        color: var(--whiteColor);
+                        font-weight: 600;
+                        padding-bottom: 1rem;
+                    }   
+
+                    p{
+                        color: var(--whiteColor);
+                        opacity: .7;
+                        font-size: 12px;
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .cardVideo{
+                border: 2px solid var(--whiteColor);
+                height: 200px;
+                width: 100%;
+                border-radius: 10px;
+                overflow: hidden;
+
+                video{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+/* Media Queries */
+@media screen and (min-width: 720px) {
+    .about{
+        .secContainer{
+            .videoCard{
+                .cardContent{
+                    gap: 4rem;
+                    padding: 4rem 3rem;
+                    grid-template-columns: repeat(2,1fr) !important;
+
+                    .cardText{
+                        h2{
+                            font-size: 2rem;
+                        }
+
+                        p{
+                            opacity: .7;
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about{
+        .secContainer{
+            .mainContent{
+                padding: 2rem 0 0;
+            }
+        }
+    }
+}
+
+/* Media Queries */
+@media screen and (min-width: 556px) {
+    .mainContent{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  @media screen and (min-width: 884px) {
+    .mainContent{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }

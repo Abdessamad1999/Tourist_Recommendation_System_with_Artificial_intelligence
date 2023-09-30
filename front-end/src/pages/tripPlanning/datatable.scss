@@ -1,0 +1,41 @@
+.data-table-custom {
+
+    .action-button {
+        width: 100%;
+        display: flex;
+
+        .btn {
+            width: auto;
+            padding: .3rem .6rem;
+            margin-right: .6rem;
+            font-size: .9rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .btn-action-delete {
+            background: rgb(255, 31, 31);
+        }
+
+        .btn-action-show {
+            background: rgb(0, 4, 255);
+        }
+
+        .btn-action-like {
+            color: rgb(4, 210, 83);
+        }
+
+        .btn-action-dislike {
+            color: red;
+        }
+
+        .icon {
+            font-size: 1rem;
+        }
+    }
+
+    .rdt_TableHead {
+        font-size: .9rem;
+        font-weight: 600;
+    }
+}

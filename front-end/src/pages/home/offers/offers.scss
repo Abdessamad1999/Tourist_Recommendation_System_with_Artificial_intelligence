@@ -1,0 +1,163 @@
+.offer {
+    padding: 4rem 0 0;
+
+    .textDiv {
+        text-align: center;
+        padding-bottom: 1.5rem;
+
+        .secTitle {
+            color: var(--blackColor);
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.5rem;
+            padding-bottom: .5rem;
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--textColor);
+            font-weight: 500;
+        }
+    }
+
+    .mainContent {
+        gap: 1rem;
+
+        .singleOffer {
+            border-radius: 1rem;
+            overflow: hidden;
+            padding: .5rem;
+            box-shadow: 0 2px 8px 2px rgba(178, 178, 178, .45);
+            transition: all 1s ease;
+
+            .icon {
+                font-size: 20px;
+                color: var(--textColor);
+            }
+
+            small {
+                font-weight: 500;
+                color: var(--textColor);
+            }
+
+            .map_trip {
+                position: relative;
+                height: 250px;
+                width: 100%;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                .map {
+                    height: 100%;
+                    background: #8f03033a;
+                }
+            }
+
+            .offer_body {
+                padding: 1.4rem 1rem;
+                height: calc(100% - 250px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h4 {
+                    color: var(--blackColor);
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                }
+
+                .list_categories {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    padding: 1rem 0;
+                    gap: .5rem;
+
+                    .category {
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        background: var(--grayBg);
+                        gap: .5rem;
+                    }
+                }
+
+                .start_end {
+                    margin: .5rem 0;
+                    padding: .5rem .2rem;
+                    border-top: 2px solid #dbdbdb;
+                    border-bottom: 2px solid #dbdbdb;
+
+                    .location {
+                        width: 100%;
+                        font-weight: 600;
+
+                        small {
+                            margin-left: .3rem;
+                        }
+                    }
+                }
+
+                .btn-details {
+                    margin-top: 1rem;
+                    width: 100%;
+                    border-radius: 50px;
+                    text-align: center;
+                    justify-content: center;
+                    padding: .6rem;
+                    background: var(--PrimaryColor);
+                    color: var(--whiteColor);
+                    font-weight: 600;
+                    gap: .5rem;
+
+                    .icon {
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+
+            &:hover {
+                transform: translateY(-7px);
+            }
+        }
+    }
+}
+
+.marker {
+    width: 0;
+    height: 0;
+}
+
+.marker span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background: var(--PrimaryColor);
+    border: solid 2px;
+    border-radius: 0 70% 70%;
+    box-shadow: 0 0 2px #000;
+    cursor: pointer;
+    transform-origin: 0 0;
+    transform: rotateZ(-135deg);
+}
+
+.marker b {
+    transform: rotateZ(135deg)
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 556px) {
+    .mainContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 884px) {
+    .mainContent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,214 @@
+.popular {
+  padding-top: 11rem;
+}
+.popular .secHeader {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.popular .secHeader .textDiv .secTitle {
+  color: var(--blackColor);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.popular .secHeader .textDiv p {
+  font-size: 14px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+.popular .secHeader .iconsDiv {
+  gap: 0.5rem;
+  position: relative;
+}
+.popular .secHeader .iconsDiv button {
+  background: none;
+  outline: none;
+  border: none;
+}
+.popular .secHeader .iconsDiv .icon {
+  padding: 0.5rem;
+  background: var(--grayText);
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+.popular .secHeader .iconsDiv .icon:hover {
+  background: var(--blackColor);
+  color: var(--whiteColor);
+}
+.popular .secHeader .iconsDiv .leftIcon {
+  background: var(--blackColor);
+  color: var(--whiteColor);
+}
+.popular .secHeader .iconsDiv .leftIcon:hover {
+  background: var(--grayText);
+  color: var(--blackColor);
+}
+.popular .secContent {
+  padding: 1.5rem 0;
+}
+.popular .secContent .slick-list, .popular .secContent .slick-slider, .popular .secContent .slick-track {
+  padding: 0;
+}
+.popular .secContent .slick-dots {
+  bottom: -28px;
+  text-align: left;
+  margin-left: 1rem;
+}
+.popular .secContent .slick-dots li button:before {
+  content: "";
+}
+.popular .secContent .slick-dots li button {
+  width: 9px;
+  height: 4px;
+  background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+  padding: 0.1rem;
+  margin-top: 1rem;
+  transition: all 400ms ease-in-out;
+  border-radius: 50px;
+}
+.popular .secContent .slick-dots li.slick-active button {
+  background: var(--PrimaryColor);
+  width: 15px;
+}
+.popular .secContent .slick-dots li {
+  margin: 0;
+}
+.popular .secContent .cardDestination .signleDestination {
+  margin: 0 0.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+}
+.popular .secContent .cardDestination .signleDestination .destImage {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.popular .secContent .cardDestination .signleDestination .destImage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular .secContent .cardDestination .signleDestination .destImage .overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.popular .secContent .cardDestination .signleDestination .destImage .overlayInfo h3 {
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+.popular .secContent .cardDestination .signleDestination .destImage .overlayInfo p {
+  color: var(--whiteColor);
+  opacity: 0.7;
+  font-size: 13px;
+}
+.popular .secContent .cardDestination .signleDestination .destImage .overlayInfo .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 0.5rem;
+  background: var(--PrimaryColor);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+.popular .secContent .cardDestination .signleDestination .destImage .overlayInfo .icon:hover {
+  background: var(--blackColor);
+  border: 1px solid var(--PrimaryColor);
+  color: var(--PrimaryColor);
+}
+.popular .secContent .cardDestination .signleDestination .destFooter {
+  padding: 1rem;
+}
+.popular .secContent .cardDestination .signleDestination .destFooter .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blackColor);
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.popular .secContent .cardDestination .signleDestination .destFooter .number::after {
+  content: "";
+  position: absolute;
+  background: var(--PrimaryColor);
+  top: 45%;
+  right: -150%;
+  height: 5px;
+  width: 45px;
+  border-radius: 1rem;
+}
+.popular .secContent .cardDestination .signleDestination .destFooter .destText {
+  justify-content: space-between;
+}
+.popular .secContent .cardDestination .signleDestination .destFooter .destText h6 {
+  color: var(--blackColor);
+  font-size: 15px;
+}
+.popular .secContent .cardDestination .signleDestination .destFooter .destText .flex {
+  font-size: 16px;
+  font-weight: 600;
+  align-items: flex-start;
+  transform: translateY(5px);
+}
+.popular .secContent .cardDestination .signleDestination .destFooter .destText .flex .icon {
+  color: var(--PrimaryColor);
+}
+.popular .secContent .cardDestination .signleDestination:hover .overlayInfo {
+  overflow: visible;
+  padding: 1rem 1.5rem;
+  height: 100%;
+}
+
+/* Media Queries */
+@media screen and (min-width: 480px) {
+  .popular {
+    padding-top: 7rem;
+  }
+}
+@media screen and (min-width: 556px) {
+  .popular .secHeader {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .popular .secHeader .textDiv {
+    text-align: start;
+    max-width: 70%;
+  }
+  .popular .secHeader .iconsDiv {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 720px) {
+  .popular {
+    padding-top: 7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popular {
+    padding-top: 10rem;
+  }
+  .popular .secHeader .textDiv .secTitle {
+    font-size: 2.2rem;
+  }
+  .popular .secHeader .textDiv p {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=popular.css.map */

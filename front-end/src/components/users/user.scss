@@ -1,0 +1,239 @@
+.main {
+
+    min-height: 100vh;
+    background: linear-gradient(rgba(33, 33, 33, 0.4), rgba(33, 33, 33, 0.4)), url(../../images/bg1.jpg);
+    // background: linear-gradient(rgba(124, 124, 124, 0.682), rgba(186, 186, 186, 0.699));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+
+
+    .btn-primary-cust {
+        background: var(--PrimaryColor);
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+            // border: 2px solid var(--PrimaryColor);
+            background: var(--HoverColor);
+            color: #fff;
+        }
+    }
+
+    .container {
+        margin: 0 auto;
+        height: 100%;
+
+
+        // .btn-primary {
+        //     border-radius: 5px;
+        //     background: var(--PrimaryColor);
+
+        //     &:hover {
+        //         background: var(--HoverColor);
+        //     }
+        // }
+
+        .row {
+            height: 100%;
+
+            .panel {
+                min-height: 380px;
+                box-shadow: 5px 5px 20px rgb(248, 248, 248);
+                border-radius: 12px;
+                background: rgba(255, 255, 255, .96);
+
+                .panel-heading {
+                    text-align: center;
+                    margin-bottom: 12px;
+
+                    h3 {
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        color: #2f2e2e;
+                    }
+                }
+
+                .panel-body {
+
+                    .input-field {
+                        background: #fff;
+                        border-radius: 5px;
+                        margin-bottom: 10px;
+                        padding: 5px;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        border: 1px solid #ddd;
+                        color: #f9713b;
+
+                        input[type='text'],
+                        input[type='password'] {
+                            border: none;
+                            outline: none;
+                            box-shadow: none;
+                            width: 100%;
+                        }
+
+                        .icon {
+                            font-size: 2.2rem;
+                            // color: inherit;
+                        }
+
+                        .icon-eye-invisible {
+                            color: #aeaeae;
+                            font-size: 1.3rem;
+                        }
+
+                        .icon-eye {
+                            color: #f9713b;
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    .form-inline {
+                        label {
+                            padding-left: 10px;
+                            margin: 0;
+                            cursor: pointer;
+                        }
+
+                        #forgot {
+                            min-width: 100px;
+                            margin-left: auto;
+                            text-decoration: none;
+                        }
+
+                    }
+
+                    a:hover {
+                        text-decoration: none;
+                    }
+
+                    .progressbar {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        counter-reset: step;
+                        margin: 1.5rem 0;
+
+
+
+                        // in-active circles
+                        .progress-step {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            background-color: #fff;
+                            border-radius: 50%;
+                            border: 3px solid #000;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #000;
+                            z-index: 2;
+
+                            // circle
+                            &::before {
+                                counter-increment: step;
+                                content: counter(step);
+                                //color: #000;
+                            }
+
+                            // top text
+                            &::after {
+                                content: attr(data-title);
+                                text-align: center;
+                                margin-bottom: .2rem;
+                                width: auto;
+                                position: absolute;
+                                top: calc(-100% + 1rem);
+                                font-size: .85rem;
+                                color: #000;
+                                font-weight: 700;
+                            }
+                        }
+
+                        // active circle
+                        .progress-step-active {
+                            background-color: var(--PrimaryColor);
+                            color: #fff;
+                            border: none;
+                        }
+                    }
+
+                    // progress bar line
+                    .progressbar::before,
+                    .progress {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 3px;
+                        width: 100%;
+                        background-color: #000;
+                        z-index: 1;
+                    }
+                }
+
+
+                .bordert {
+                    border-top: 1px solid #aaa;
+                    position: relative;
+
+                    a {
+                        text-decoration: none;
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            position: relative;
+                        }
+                    }
+
+                    &::after {
+                        content: "or connect with";
+                        position: absolute;
+                        top: -13px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: #FCFCF9;
+                        padding: 0px 8px;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+}
+
+
+@media(max-width: 360px) {
+    body {
+        height: 100%;
+
+        .container {
+            margin: 30px 0;
+
+            #forgot {
+                margin-left: 0;
+                padding-top: 10px;
+            }
+
+            .bordert::after {
+                left: 25%;
+            }
+        }
+
+    }
+}
